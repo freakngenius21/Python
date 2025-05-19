@@ -5,21 +5,20 @@ s = int(input("Enter a number to search whether it is in the array or not: "))
 low = 0
 high = len(a) - 1
 
-found = False
 
 while low <= high:
     mid = (low + high) // 2
 
     if a[mid] == s:
         print("The number is found at index", mid)
-        found = True
         break
-    if a[mid] > s:
+        
+    elif a[mid] > s:
         high = mid - 1
-    if a[mid] < s:
+    elif a[mid] < s:
         low = mid + 1
 
-if not found:
+else:
     print("The number is not found in the array.")
 
     
